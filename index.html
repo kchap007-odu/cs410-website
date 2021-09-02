@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tab title -->
+    <title>Ener-G View</title>
+
+    <!-- CSS files -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Bulb.png" />
+  </head>
+
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- Remove id and update link below -->
+    <!------------------------------- Navbar ------------------------------->
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- Toggle Collapse For Small Screens -->
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+            aria-label="Toggle"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- Logo -->
+          <a class="navbar-brand" href="#myPage">
+            <!-- Need to change link to blank. -->
+            <img src="assets/logo.png" class="logo-style" alt="Team Crystal" />
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+            <!------------------ Problem statement dropdown ------------------>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Problem <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#problem">Statement</a>
+                </li>
+                <li>
+                  <a href="#characteristics">Characteristics</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#solution">Solution</a>
+            </li>
+
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+
+            <!-------------------- Presentation dropdown -------------------->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Presentations <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#feasibilityV1">Feasibility Presentation V1</a>
+                </li>
+                <li>
+                  <a href="#feasibilityV2">Feasibility Presentation V2</a>
+                </li>
+                <li>
+                  <a href="#designV1">Design Presentation V1</a>
+                </li>
+                <li>
+                  <a href="#designV2">Design Presentation V2</a>
+                </li>
+                <li>
+                  <a href="#prototype">Prototype Presentation</a>
+                </li>
+              </ul>
+            </li>
+
+            <!------------------- Deliverables dropdown ---------------------->
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Deliverables <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#currentProcessFlow">Current Process Flow</a>
+                </li>
+                <li>
+                  <a href="#solutionProcessFlow">Solution Process Flow</a>
+                </li>
+                <li>
+                  <a href="#competitionMatrix">Competition Matrix</a>
+                </li>
+                <li>
+                  <a href="#mfcd">MFCD</a>
+                </li>
+                <li>
+                  <a href="#wbs">Work Breakdown Structure</a>
+                </li>
+                <li>
+                  <a href="#mockups">Mockups</a>
+                </li>
+                <li>
+                  <a href="#algorithms">Algorithms</a>
+                </li>
+                <li>
+                  <a href="#databaseSchema">Database Schema</a>
+                </li>
+                <li>
+                  <a href="#riskMatrix">Risk Matrix</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Labs <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#lab1Outline">Lab 1 Outline</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#userStories">User Stories</a>
+            </li>
+
+            <li>
+              <a href="#references">References</a>
+            </li>
+
+            <li>
+              <a href="#glossary">Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--------------------------------- Banner ------------------------------->
+    <div class="jumbotron text-center">
+      <h1>Ener-G View</h1>
+      <p><b>Be bright, be smart.</b></p>
+    </div>
+
+    <main>
+      <!------------------------- Problem Statement ------------------------->
+      <div id="problem" class="container-fluid">
+        <h1>Problem Statement</h1>
+        <p class="slide-animation">
+          A typical U.S. family spends $2,060 on average per year for home
+          utility bills<a href="#references"><sup>[1]</sup></a> and the cost
+          continues to rise<a href="#references"><sup>[2]</sup></a
+          >. With 31% of households struggling to pay energy bills and an
+          expected cost increase of 2.4% by 2022<a href="#references"
+            ><sup>[3]</sup></a
+          >, there is a financial strain on families. Furthermore, there is no
+          cohesive way to track all utilities in one location.
+        </p>
+      </div>
+      <!---------------------- Problem Characteristics ---------------------->
+      <div id="characteristics" class="container-fluid bg-grey">
+        <h1>Problem Characteristics</h1>
+        <ul class="slide-animation">
+          <li>
+            Virginia Ranked 11 Most Expensive in 2020<a href="#references"
+              ><sup>[4]</sup></a
+            >
+          </li>
+          <ul>
+            <li>Avg. Monthly Electric: $124.54</li>
+            <li>Avg. Monthly Water: $70.39</li>
+            <li>Avg. Monthly Natural Gas: $74.32</li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>Natural Gas provides historical data visual on bill</li>
+          <ul>
+            <li>Waterworks and Dominion do not</li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>Data is not centrally located</li>
+          <ul>
+            <li>
+              Must have a separate app/website page per utility for
+              visualization data
+            </li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>
+            Most energy efficient improvements require spending money upfront
+          </li>
+          <ul>
+            <li>Energy Efficient Appliances</li>
+            <li>Improved Windows</li>
+            <li>Great initial buy in for renewable energy</li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>
+            Average family in the U.S. uses more than 300 gallons/day<a
+              href="#references"
+              ><sup>[5]</sup></a
+            >
+          </li>
+          <ul>
+            <li>70% indoor usage</li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>
+            Household leaks waste nearly 10,000 gallons/year<a
+              href="#references"
+              ><sup>[6]</sup></a
+            >
+          </li>
+          <ul>
+            <li>10% of homes waste at least 90 gallons/day</li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>Delivery, treatment, and heating of water energy intensive</li>
+          <ul>
+            <li>
+              EPA estimates letting a faucet run for 5 minutes is equivalent to
+              60-watt light bulb running for 22 hours<a href="#references"
+                ><sup>[7]</sup></a
+              >
+            </li>
+          </ul>
+        </ul>
+
+        <ul class="slide-animation">
+          <li>High Cost of Smart Devices:</li>
+          <ul>
+            <li>
+              Home automation costs an average of $757<a href="#references"
+                ><sup>[8]</sup></a
+              >
+            </li>
+            <ul>
+              <li>Most users spend between $182 and $1347</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>
+              Installation for complete home automation can cost around $3000<a
+                href="#references"
+                ><sup>[8]</sup></a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              National Average for smart thermostat: $300<a href="#references"
+                ><sup>[9]</sup></a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>Smart Faucets:</li>
+            <ul>
+              <li>Moen: $430+</li>
+              <li>Delta: $506+</li>
+              <li>Kohler: $875+</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Smart Lighting:</li>
+            <ul>
+              <li>Bulbs: ~$10+ per bulb</li>
+              <li>Some bulbs require a hub</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Smart Hub:</li>
+            <ul>
+              <li>HomeAssist: $140</li>
+              <li>Google: $89.99+</li>
+              <li>Amazon: $99.99+</li>
+              <li>Phillips Hue Bridge: $60</li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+
+      <!--------------------- Solution Characteristics --------------------->
+      <div id="solution" class="container-fluid">
+        <h1>What We Do</h1>
+
+        <div class="row slide-animation">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <h4>Bright Ideas</h4>
+            <p>
+              We provide tips to reduce utility bill costs based off of your
+              most recent utility usage data, historical statistics, and current
+              events.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-stats logo-small"></span>
+            <h4>Dashboard</h4>
+            <p>
+              We provide a dashboard with an appealing interface to visualize
+              your utility usage data.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-hdd logo-small"></span>
+            <h4>Centralization</h4>
+            <p>
+              All of your data is available in one central location. No more
+              logging into multiple websites to view your information.
+            </p>
+          </div>
+        </div>
+        <div class="row slide-animation">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-dashboard logo-small"></span>
+            <h4>Statistics</h4>
+            <p>
+              We provide a statistical analysis of your historical data and
+              report how you compare to reports from utility companies.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-phone logo-small"></span>
+            <h4>Alerts</h4>
+            <p>
+              We provide alerts to upcoming billing dates and dramatic increases
+              in usage.
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4>Reduce</h4>
+            <p>
+              We help you reduce reliance on utilities and reduce overall
+              consumption of energy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------- About Us ---------------------------->
+      <div id="about" class="container-fluid bg-grey">
+        <h1>Who We Are</h1>
+        <!-- Top Row -->
+        <div class="row text-center slide-animation bios">
+          <!-- Aubrie -->
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="assets/aubrie.jpg"
+                alt="Aubrie Davie"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Aubrie Davie</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Aubrie Davie is a senior at Old Dominion University pursuing a
+                Bachelor's in Computer Science with a minor in Energy
+                Engineering. She currently leads efforts to achieve
+                sustainability goals set forth by the Department of Energy at
+                Jefferson Lab in Newport News, Virginia. She lives with her
+                husband, daughter, Labrador (Curie), and her Pithuahua (Rocker)
+                on the James River.
+              </p>
+            </div>
+          </div>
+          <!-- Michael -->
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="assets/michael.JPG"
+                alt="Michael Aspinwall"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Michael Aspinwall</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Michael Aspinwall is a senior at Old Dominion University
+                majoring in Computer Science. He hopes to graduate in the Winter
+                of 2021. He loves working with computers, programming, and
+                playing video games.
+              </p>
+            </div>
+          </div>
+          <!-- Kyle -->
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="assets/kyle.jpg"
+                alt="Kyle Chappell"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Kyle Chappell</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Kyle Chappell is a Second Degree student at Old Dominion
+                University and is a part of the Computer Science Linked BS/MS
+                program. He is expected to complete the Bachelor's by end of
+                Summer 2021. He works at Fort Belvoir, VA providing data
+                analysis, algorithm development, and other technical services.
+                His hobbies include cooking, audio engineering, drumming, and
+                low-voltage electronics.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Row -->
+        <div class="row text-center slide-animation bios">
+          <!-- Shyam -->
+          <div class="col-sm-4">
+            <div class="thumbnail" style="flex-direction: column">
+              <img
+                src="assets/shyam.jpg"
+                alt="Shyam Dhingani"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Shyam Dhingani</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Shyam Dhingani is a senior Undergraduate student at Old Dominion
+                University majoring in Computer Science and minoring in Cyber
+                Security. He is also working as a fulltime Python Developer in
+                New York City. He loves to play video games in his free time
+                with his friends and enjoys hiking/biking during the weekends.
+              </p>
+            </div>
+          </div>
+          <!-- Naresh -->
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="assets/naresh.jpg"
+                alt="Naresh Knadka"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Naresh Khadka</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Naresh Khadka is a senior at Old Dominion University pursuing a
+                BS in computer science. He is expected to graduate in the summer
+                of 2021. He also graduated with his first undergraduate degree
+                from ECPI northern Virginia. He lives in Austin, Texas, and
+                works for Samsung Austin Semiconductor as a Senior Technician.
+                He loves to travel and explore new places. He has two kids: one
+                daughter and one son.
+              </p>
+            </div>
+          </div>
+          <!-- Sergiy -->
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <img
+                src="assets/sergiy.jpeg"
+                alt="Sergiy Yermak"
+                class="img-rounded center"
+                style="max-width: 90%"
+              />
+              <br />
+              <h4><strong>Sergiy Yermak</strong></h4>
+              <h5><strong>Role TBD</strong></h5>
+              <p>
+                Sergiy Yermak is a senior at Old Dominion University and
+                expected to graduate in December of 2021. He is working to
+                attain a Bachelor of Science in Computer Science. Before
+                attending college he served in United States Navy. He enjoys a
+                variety of things from skateboarding, diving, hiking, playing
+                video games, and reading books.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------- Presentations --------------------------->
+      <div class="container-fluid">
+        <h1>Presentations</h1>
+        <!-- Feasibility V1 -->
+        <div id="feasibilityV1" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Feasibility V1</h2>
+            <div class="presentation">
+              <div>
+                <p class="loading">Loading...</p>
+              </div>
+              <iframe
+                src="about:blank"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                wmode="opaque"
+              ></iframe>
+            </div>
+            <a
+              href="assets/Feasibility Presentation V1.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version
+            </a>
+          </div>
+        </div>
+        <!-- Feasibility V2 -->
+        <div id="feasibilityV2" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Feasibility V2</h2>
+            <div class="presentation">
+              <div>
+                <p class="loading">Loading...</p>
+              </div>
+              <iframe
+                src="about:blank"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                wmode="opaque"
+              ></iframe>
+            </div>
+            <a
+              href="assets/Feasibility Presentation V2.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version
+            </a>
+          </div>
+        </div>
+        <!-- Design V1 -->
+        <div id="designV1" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Design V1</h2>
+            <div class="presentation">
+              <div>
+                <p class="loading">Loading...</p>
+              </div>
+              <iframe
+                src="about:blank"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                wmode="opaque"
+              ></iframe>
+            </div>
+            <a
+              href="assets/Design V1.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version</a
+            >
+          </div>
+        </div>
+        <!-- Design V2 -->
+        <div id="designV2" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Design V2</h2>
+            <div class="presentation">
+              <div>
+                <p class="loading">Loading...</p>
+              </div>
+              <iframe
+                src="about:blank"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                wmode="opaque"
+              ></iframe>
+            </div>
+            <a
+              href="assets/Design V2.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version</a
+            >
+          </div>
+        </div>
+        <!-- Prototype -->
+        <div id="prototype" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Prototype</h2>
+            <div class="presentation">
+              <div>
+                <p class="loading">Loading...</p>
+              </div>
+              <iframe
+                src="about:blank"
+                frameborder="0"
+                width="960"
+                height="569"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+                wmode="opaque"
+              ></iframe>
+            </div>
+            <a
+              href="assets/Prototype.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------- Deliverables --------------------------->
+      <div id="deliverables" class="container-fluid bg-grey">
+        <h1>Deliverables</h1>
+        <!-- Current Process Flow -->
+        <div id="currentProcessFlow" style="padding-top: 100px">
+          <div class="thumbnail slide-animation">
+            <h2>Current Process Flow</h2>
+            <img
+              src="assets/CurrentProcessFlow.png"
+              class="img-thumbnail center"
+              alt="Current Process Flow"
+              style="width: 50%; max-width: 761px"
+            />
+          </div>
+        </div>
+        <!-- Solution Process Flow -->
+        <div id="solutionProcessFlow" style="padding-top: 100px">
+          <div class="thumbnail slide-animation">
+            <h2>Solution Process Flow</h2>
+            <img
+              src="assets/SolutionProcessFlow.png"
+              class="img-thumbnail center"
+              alt="Solution Process Flow"
+              style="width: 90%; max-width: 1281px"
+            />
+          </div>
+        </div>
+        <!-- Competition Matrix -->
+        <div id="competitionMatrix" style="padding-top: 100px">
+          <h2>Competition Matrices</h2>
+          <div class="row container-fluid">
+            <!--Direct Competition Matrix-->
+            <div class="col-md-6">
+              <div class="thumbnail competitionItem">
+                <h3>Direct Competition Matrix</h3>
+                <img
+                  src="assets/directCompetitionMatrix.jpg"
+                  class="th-image"
+                  alt="Direct Competition Matrix"
+                  style="width: 90%; max-width: 645px"
+                  class="center"
+                />
+              </div>
+            </div>
+            <!--Indirect Competition Matrix-->
+            <div class="col-md-6">
+              <div class="thumbnail competitionItem">
+                <h3>Indirect Competition Matrix</h3>
+                <img
+                  src="assets/indirectCompetitionMatrix.jpg"
+                  class="th-image"
+                  alt="Indirect Competition Matrix"
+                  style="width: 90%; max-width: 645px"
+                  class="center"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MFCD -->
+        <div id="mfcd" style="padding-top: 100px">
+          <div class="thumbnail slide-animation">
+            <h2>Major Functional Component Diagram</h2>
+            <img
+              src="assets/MFCD.PNG"
+              class="img-thumbnail center"
+              alt="MFCD"
+              style="width: 80%; max-width: 660px"
+            />
+            <p style="margin: 0">Icons:</p>
+            <ol style="padding-left: 3.75em">
+              <li>
+                <a
+                  href="https://www.flaticon.com/authors/smalllikeart"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.flaticon.com/authors/smalllikeart
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/authors/gregor-cresnar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.flaticon.com/authors/gregor-cresnar
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/authors/phatplus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.flaticon.com/authors/phatplus
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/authors/dave-gandy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.flaticon.com/authors/dave-gandy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.flaticon.com/authors/xnimrodx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.flaticon.com/authors/xnimrodx
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.freepik.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://www.freepik.com
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <!-- Work Breakdown Structure -->
+        <div id="wbs" style="padding-top: 100px">
+          <div class="slide-animation">
+            <h2>Work Breakdown Structure</h2>
+            <div id="wbsNav" style="margin-bottom: 10px">
+              <a
+                data-target="#wbsCarousel"
+                data-slide-to="0"
+                class="btn active"
+                role="button"
+                >Overview</a
+              >
+              <a
+                data-target="#wbsCarousel"
+                data-slide-to="1"
+                class="btn"
+                role="button"
+                >GUI</a
+              >
+              <a
+                data-target="#wbsCarousel"
+                data-slide-to="2"
+                class="btn"
+                role="button"
+                >Algorithms</a
+              >
+              <a
+                data-target="#wbsCarousel"
+                data-slide-to="3"
+                class="btn"
+                role="button"
+                >Database</a
+              >
+              <a
+                data-target="#wbsCarousel"
+                data-slide-to="4"
+                class="btn"
+                role="button"
+                >Testing</a
+              >
+            </div>
+            <div
+              id="wbsCarousel"
+              class="carousel slide text-center"
+              data-ride="carousel"
+              data-interval="false"
+            >
+              <div class="carousel-inner" role="listbox">
+                <!--Overview-->
+                <div class="item active">
+                  <div class="thumbnail wbsItem" style="padding-bottom: 25px">
+                    <h3>Overview</h3>
+                    <img
+                      src="assets/WBSOverview.PNG"
+                      class="th-image"
+                      alt="WBS Overview"
+                      style="width: 90%; max-width: 576px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--GUI-->
+                <div class="item">
+                  <div class="thumbnail wbsItem" style="padding-bottom: 25px">
+                    <h3>GUI</h3>
+                    <img
+                      src="assets/WBSGUI.PNG"
+                      class="th-image"
+                      alt="WBS GUI"
+                      style="width: 90%; max-width: 522px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Algorithms-->
+                <div class="item">
+                  <div class="thumbnail wbsItem" style="padding-bottom: 25px">
+                    <h3>Algorithms</h3>
+                    <img
+                      src="assets/WBSAlgorithms.PNG"
+                      class="th-image"
+                      alt="WBS Algorithms"
+                      style="width: 90%; max-width: 526px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Database-->
+                <div class="item">
+                  <div class="thumbnail wbsItem" style="padding-bottom: 25px">
+                    <h3>Database</h3>
+                    <img
+                      src="assets/WBSDatabase.PNG"
+                      class="th-image"
+                      alt="WBS Database"
+                      style="width: 90%; max-width: 593px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Testing-->
+                <div class="item">
+                  <div class="thumbnail wbsItem" style="padding-bottom: 25px">
+                    <h3>Testing</h3>
+                    <img
+                      src="assets/WBSTesting.PNG"
+                      class="th-image"
+                      alt="WBS Testing"
+                      style="width: 90%; max-width: 579px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mockups Screenshots -->
+        <div id="mockups" style="padding-top: 100px">
+          <div class="slide-animation">
+            <h2>Mockup Screenshots</h2>
+            <!-- Carousel -->
+            <div
+              id="mockupCarousel"
+              class="carousel slide text-center"
+              data-ride="carousel"
+              data-interval="10000"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#mockupCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#mockupCarousel"
+                  data-slide-to="1"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#mockupCarousel"
+                  data-slide-to="2"
+                  class="active"
+                ></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <!--Login Page-->
+                <div class="item active">
+                  <div
+                    class="thumbnail mockupItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Login Page</h3>
+                    <img
+                      src="assets/LoginPage.png"
+                      class="th-image"
+                      alt="Login Page Mockup"
+                      style="width: 90%; max-width: 645px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Account Creation-->
+                <div class="item">
+                  <div
+                    class="thumbnail mockupItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Account Creation</h3>
+                    <img
+                      src="assets/accountCreation.png"
+                      class="th-image"
+                      alt="Account Creation Mockup"
+                      style="width: 90%; max-width: 645px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Dashboard-->
+                <div class="item">
+                  <div
+                    class="thumbnail mockupItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Dashboard</h3>
+                    <img
+                      src="assets/dashboard.png"
+                      class="th-image"
+                      alt="Dashboard Mockup"
+                      style="width: 90%; max-width: 645px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Left and right controls for Carousel -->
+              <a
+                class="left carousel-control"
+                data-target="#mockupCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="right carousel-control"
+                data-target="#mockupCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Algorithms -->
+        <div id="algorithms" style="padding-top: 100px">
+          <div class="slide-animation">
+            <h2>Algorithms</h2>
+            <!-- Carousel -->
+            <div
+              id="algorithmCarousel"
+              class="carousel slide text-center"
+              data-ride="carousel"
+              data-interval="10000"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#algorithmCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#algorithmCarousel"
+                  data-slide-to="1"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#algorithmCarousel"
+                  data-slide-to="2"
+                  class="active"
+                ></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <!--Sign In-->
+                <div class="item active">
+                  <div
+                    class="thumbnail algorithmItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Sign In</h3>
+                    <img
+                      src="assets/SignInAlgorithm.png"
+                      class="th-image"
+                      alt="Sign In Algorithm"
+                      style="width: 50%; max-width: 545px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Data Extraction-->
+                <div class="item">
+                  <div
+                    class="thumbnail algorithmItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Data Extraction</h3>
+                    <img
+                      src="assets/DataExtractionAlgorithm.png"
+                      class="th-image"
+                      alt="Data Extraction Algorithm"
+                      style="width: 90%; max-width: 711px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+                <!--Visualization-->
+                <div class="item">
+                  <div
+                    class="thumbnail algorithmItem"
+                    style="padding-bottom: 25px"
+                  >
+                    <h3>Visualization</h3>
+                    <img
+                      src="assets/VisualizationAlgorithm.png"
+                      class="th-image"
+                      alt="Visualization Algorithm"
+                      style="width: 50%; max-width: 454px"
+                      class="center"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Left and right controls for Carousel -->
+              <a
+                class="left carousel-control"
+                data-target="#algorithmCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="right carousel-control"
+                data-target="#algorithmCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Database Schema -->
+        <div id="databaseSchema" style="padding-top: 100px">
+          <div class="thumbnail slide-animation">
+            <h2>Database Schema</h2>
+            <img
+              src="assets/DatabaseSchema.png"
+              class="img-thumbnail center"
+              alt="Database Schema"
+              style="width: 40%; max-width: 749px"
+            />
+          </div>
+        </div>
+        <!-- Risk Matrices-->
+        <div id="riskMatrix" style="padding-top: 100px">
+          <div class="slide-animation">
+            <h2>Risk Matrices</h2>
+            <!-- Carousel -->
+            <div
+              id="myCarousel"
+              class="carousel slide text-center"
+              data-ride="carousel"
+              data-interval="10000"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#myCarousel"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#myCarousel"
+                  data-slide-to="1"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#myCarousel"
+                  data-slide-to="2"
+                  class="active"
+                ></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <!--Technical Risk Matrix-->
+                  <div class="thumbnail container-fluid">
+                    <div class="row">
+                      <h3>Technical</h3>
+                      <img
+                        src="assets/TechnicalRiskMatrix.png"
+                        alt="Customer Risk Matrix"
+                        style="width: 50%; max-width: 511px; height: auto"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/InitialRisk.png"
+                          alt="Initial Risk"
+                          style="width: 35%; max-width: 195px; height: auto"
+                        />
+                      </div>
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/MitigatedRisk.png"
+                          alt="Mitigated Risk"
+                          style="width: 35%; max-width: 194px; height: auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <table class="riskTable">
+                        <tr>
+                          <th>ID</th>
+                          <th>Risk Title</th>
+                          <th>Probability</th>
+                          <th>Impact</th>
+                          <th>Mitigation</th>
+                        </tr>
+                        <tr>
+                          <td>T1</td>
+                          <td
+                            >Security threats against user data
+                            (confidentiality, integrity, and availability).</td
+                          >
+                          <td>High</td>
+                          <td>High</td>
+                          <td
+                            >Implement the best possible security features and
+                            implement secure data backup and restoration.</td
+                          >
+                        </tr>
+                        <tr>
+                          <td>T2</td>
+                          <td>Reliance on third-party APIs/Utilities(AWS).</td>
+                          <td>High</td>
+                          <td>High</td>
+                          <td
+                            >Perform troubleshooting, proof of concept, and
+                            prototyping to ensure functionality. Different
+                            third-party resources may be used if desired
+                            functionality is not initially achieved.</td
+                          >
+                        </tr>
+                        <tr>
+                          <td>T3</td>
+                          <td
+                            >Differing structures of bills may cause problems
+                            for automatically extracting billing
+                            information.</td
+                          >
+                          <td>High</td>
+                          <td>Medium</td>
+                          <td
+                            >Identify key phrases for system to recognize and
+                            extract.</td
+                          >
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <!--Customer Risk Matrix-->
+                  <div class="thumbnail container-fluid">
+                    <div class="row">
+                      <h3>Customer</h3>
+                      <img
+                        src="assets/CustomerRiskMatrix.png"
+                        alt="Customer Risk Matrix"
+                        style="width: 50%; max-width: 511px; height: auto"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/InitialRisk.png"
+                          alt="Initial Risk"
+                          style="width: 35%; max-width: 195px; height: auto"
+                        />
+                      </div>
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/MitigatedRisk.png"
+                          alt="Mitigated Risk"
+                          style="width: 35%; max-width: 194px; height: auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <table class="riskTable">
+                        <tr>
+                          <th>ID</th>
+                          <th>Risk Title</th>
+                          <th>Probability</th>
+                          <th>Impact</th>
+                          <th>Mitigation</th>
+                        </tr>
+                        <tr>
+                          <td>C1</td>
+                          <td
+                            >User will discontinue use of service if data
+                            extraction isn't accurate.</td
+                          >
+                          <td>Low</td>
+                          <td>Medium</td>
+                          <td
+                            >Optimize the recognition algorithm and allow the
+                            user to identify the data they would like to be
+                            extracted.</td
+                          >
+                        </tr>
+                        <tr>
+                          <td>C2</td>
+                          <td>Product is not useful to utility customers.</td>
+                          <td>Medium</td>
+                          <td>Medium</td>
+                          <td
+                            >Provide useful energy saving solutions and
+                            regularly perform surveys to ensure end-user
+                            satisfaction.</td
+                          >
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <!--Legal Risk Matrix-->
+                  <div class="thumbnail container-fluid">
+                    <div class="row">
+                      <h3>Legal</h3>
+                      <img
+                        src="assets/LegalRiskMatrix.png"
+                        alt="Legal Risk Matrix"
+                        style="width: 50%; max-width: 511px; height: auto"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/InitialRisk.png"
+                          alt="Initial Risk"
+                          style="width: 35%; max-width: 195px; height: auto"
+                        />
+                      </div>
+                      <div class="col-sm-6">
+                        <img
+                          src="assets/MitigatedRisk.png"
+                          alt="Mitigated Risk"
+                          style="width: 35%; max-width: 194px; height: auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <table class="riskTable">
+                        <tr>
+                          <th>ID</th>
+                          <th>Risk Title</th>
+                          <th>Probability</th>
+                          <th>Impact</th>
+                          <th>Mitigation</th>
+                        </tr>
+                        <tr>
+                          <td>L1</td>
+                          <td
+                            >Compromise of personally identifiable
+                            information.</td
+                          >
+                          <td>High</td>
+                          <td>High</td>
+                          <td
+                            >Implement the best possible security features and
+                            do not collect personal information such as: names,
+                            account number, DoB, etc.</td
+                          >
+                        </tr>
+                        <tr>
+                          <td>L2</td>
+                          <td
+                            >Buy-in from utilities required for syncing accounts
+                            to Ener-G View.</td
+                          >
+                          <td>High</td>
+                          <td>Medium</td>
+                          <td
+                            >Manually input data from utility bill and offer
+                            incentives for utility companies to partner with
+                            Ener-G View.</td
+                          >
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Left and right controls for Carousel -->
+              <a
+                class="left carousel-control"
+                data-target="#myCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="right carousel-control"
+                data-target="#myCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------- Labs ----------------------------->
+      <div class="container-fluid">
+        <h1>Labs</h1>
+        <div id="lab1Outline" style="padding-top: 100px">
+          <div class="thumbnail slide-animation bg-grey">
+            <h2>Lab 1 Outline</h2>
+            <iframe
+              src="https://docs.google.com/document/d/e/2PACX-1vQGou-ZxQw0VzGeG99dWRdhCpe5x7TGbhgrX6UtoC4Ex4qFlridaTCtTA94jvgUj9KhSFAAlJHOnXIC/pub?embedded=true"
+              style="
+                width: 70vw;
+                max-width: 816px;
+                height: 500px;
+                border: 2px solid black;
+              "
+            ></iframe>
+            <br />
+            <a
+              href="assets/Lab 1 Outline.pdf"
+              class="btn btn-lg pdf"
+              role="button"
+              target="_blank"
+            >
+              PDF Version</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!------------------------- User Stories ------------------------->
+      <div id="userStories" class="container-fluid bg-grey">
+        <h1>User Stories</h1>
+        <!---------------------- End User ------------------------------>
+        <div class="row thumbnail slide-animation">
+          <h2>End User</h2>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>must</b> be able to do:</h4>
+            <ul>
+              <li>Create a new user account.</li>
+              <li
+                >Upload my utility bills as any common image file format (JPG,
+                PDF, etc.).</li
+              >
+              <li
+                >View the usage data of each of my utilities from a centralized
+                location.</li
+              >
+              <li
+                >See a graphical representation of my usage of each of my
+                utility bills.</li
+              >
+              <li
+                >Receive alerts whenever a sharp jump in utility usage
+                occurs.</li
+              >
+              <li>Receive tips on how to reduce utility usage.</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>wish</b> to be able to do:</h4>
+            <ul>
+              <li>Connect my smart home devices to Ener-G View.</li>
+              <li
+                >View the data from my smart home devices from a centralized
+                location.</li
+              >
+              <li
+                >Use Multi-Factor Authentication to keep my account secure.</li
+              >
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>must not</b> be able to do:</h4>
+            <ul>
+              <li>View or alter the personal details of other users.</li>
+              <li>View or alter the utility usage of other users.</li>
+            </ul>
+          </div>
+        </div>
+        <!------------------- Administrator --------------------------->
+        <div class="row thumbnail slide-animation">
+          <h2>Administrator</h2>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>must</b> be able to do:</h4>
+            <ul>
+              <li
+                >Update the layout or design of the website to improve
+                functionality.</li
+              >
+              <li>Apply updates and patches to the back end systems.</li>
+              <li
+                >Assist users in troubleshooting issues surrounding the use of
+                Ener-G View.</li
+              >
+              <li>Add or remove "Bright Ideas."</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>wish</b> to be able to do:</h4>
+            <ul>
+              <li
+                >Use Multi-Factor Authentication to keep my account secure.</li
+              >
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <h4 style="text-align: left">I <b>must not</b> be able to do:</h4>
+            <ul>
+              <li>View or alter the personal details of other users.</li>
+              <li>View or alter the utility usage of other users.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-------------------------- References -------------------------->
+      <div id="references" class="container-fluid">
+        <h1>References</h1>
+        <p class="reference slide-animation">
+          <br />1.
+          <a
+            href="https://www.nationwide.com/lc/resources/personal-finance/articles/average-cost-of-utilities"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>What is the Average Cost of Utilities?</i> Nationwide. (2021).</a
+          >
+          <br />2.
+          <a
+            href="https://www.eia.gov/outlooks/steo/report/electricity.php#:~:text=Electricity%20Prices.&text=EIA%20forecasts%20the%20U.S.%20retail,an%20additional%201.2%25%20in%202022"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              >U.S. Energy Information Administration - EIA - Independent
+              Statistics and Analysis.</i
+            >
+            Short-Term Energy Outlook - U.S. Energy Information Administration
+            (EIA). (2021, January 12).</a
+          >
+          <br />3.
+          <a
+            href="https://www.eia.gov/todayinenergy/detail.php?id=37072 "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i
+              >One in three U.S. households faces a challenge in meeting energy
+              needs.</i
+            >
+            Roberts, J. (2018, September 19).
+          </a>
+          <br />
+          4.
+          <a
+            href="https://www.move.org/utility-bills-101/#Average_Utility_Costs_by_State."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>Utility Bills 101: Average Cost of Utilities.</i> Move.org.
+            (2021, January 22)
+          </a>
+          <br />
+          5.
+          <a
+            href="https://www.epa.gov/watersense/how-we-use-water"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>How we use water.</i> Environmental Protection Agency. (2018,
+            February 5).
+          </a>
+          <br />
+          6.
+          <a
+            href="https://www.epa.gov/watersense/fix-leak-week"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>Fix a Leak Week.</i> Environmental Protection Agency. (2021,
+            January 11).</a
+          >
+          <br />
+          7.
+          <a
+            href="https://green.harvard.edu/tools-resources/green-tip/4-ways-measure-5-minute-shower"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>4 Ways to Measure a 5 Minute Shower.</i> Sustainability at
+            Harvard. (2020, February 4).
+          </a>
+          <br />
+          8.
+          <a
+            href="https://www.homeadvisor.com/cost/electrical/install-or-repair-a-home-automation-system"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>How Much Does A Smart Home Cost?</i> HomeAdvisor. (2021).
+          </a>
+          <br />
+          9.
+          <a
+            href="https://www.fixr.com/costs/smart-thermostat-installation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i>Smart Thermostat Installation Cost: Smart Thermostat Prices.</i>
+            Fixr. (2020, October 22).
+          </a>
+        </p>
+      </div>
+
+      <!------------------------------ Glossary ------------------------------>
+      <div
+        id="glossary"
+        class="container-fluid bg-grey"
+        style="padding-bottom: 220px"
+      >
+        <h1>Glossary</h1>
+        <div class="text-left slide-animation">
+          <dl>
+            <dt>Applicable Riders</dt>
+            <dd>
+              - temporary rate changes (fluctuate based on weather or demand on
+              the supply system)
+            </dd>
+            <dt>Delivery</dt>
+            <dd>- cost of materials to transmit natural gas to residence</dd>
+            <dt>Distribution Service</dt>
+            <dd>- cost of equipment to deliver electricity</dd>
+            <dt>Electricity Supply Svc (ESS)</dt>
+            <dd>
+              - cost of generation, transmission, and fuel to deliver
+              electricity
+            </dd>
+            <dt>Hcf</dt>
+            <dd>
+              - hundred cubic feet (1 hcf=748 gallons) (measurement for water
+              and natural gas; also known as ccf)
+            </dd>
+            <dt>kWh</dt>
+            <dd>- kilowatts per hour (measurement for electricity)</dd>
+            <dt>Sales and Use Surcharge</dt>
+            <dd>
+              - fee charged to recover Energy company’s purchase and leases,
+              based on personal consumption
+            </dd>
+            <dt>Supply</dt>
+            <dd>
+              - cost of the amount of utility delivered ($/unit of measurement)
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </main>
+
+    <footer class="navbar-fixed-bottom">
+      <!-------------------------- Footer -------------------------->
+      <p>© 2021 Team Crystal</p>
+      <a href="https://www.odu.edu">Old Dominion University</a>
+      <a href="https://www.cs.odu.edu">Department of Computer Science</a>
+    </footer>
+
+    <!-- Javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="animations.js"></script>
+  </body>
+</html>

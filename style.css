@@ -1,0 +1,470 @@
+/******************************* Color Scheme *********************************/
+/******************************************************************************/
+:root {
+  --base: #043ca4;
+  --muted: #4e7dc7;
+  --bright: #a6e1f8;
+  --accent: #ffd211;
+  --light-grey: #f6f6f6;
+  --dark-grey: #7c94a4;
+  --white: #ffffff;
+  --black: #000000;
+}
+/******************************************************************************/
+
+/********************************* Containers *********************************/
+/******************************************************************************/
+
+body {
+  text-align: center;
+  background-color: var(--white);
+  position: relative;
+}
+
+.jumbotron {
+  padding: 200px 25px;
+  background-color: var(--base);
+  color: var(--accent);
+  background-image: url("assets/energy-header.jpg");
+  background-size: cover;
+  text-shadow: 2px 2px var(--black);
+}
+
+.jumbotron p {
+  /** Hack to give outline to text. Found here:
+   * https://stackoverflow.com/questions/4919076/outline-effect-to-text
+   */
+  text-shadow: -1px -1px var(--black), 1px -1px var(--black),
+    -1px 1px var(--black), 1px 1px var(--black);
+  color: var(--white);
+}
+
+.jumbotron h1 {
+  font-size: 50px;
+}
+
+nav,
+.dropdown-menu {
+  background-color: var(--base);
+}
+
+footer {
+  align-items: center;
+  background-color: var(--base);
+  display: grid;
+  font-size: 125%;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: space-evenly;
+  padding: 0.5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+/******************************************************************************/
+
+/************************************* Text ***********************************/
+/******************************************************************************/
+font {
+  color: var(--base);
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  text-justify: inter-word;
+}
+
+h1 {
+  color: var(--base);
+  font-weight: bold;
+  letter-spacing: 0.09em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.09em;
+}
+
+main li {
+  text-align: left;
+}
+
+p {
+  padding-left: 2.25em;
+  padding-right: 2.25em;
+}
+
+main p {
+  text-align: justify;
+}
+
+footer p {
+  color: var(--bright);
+  margin: 0;
+  padding: 0;
+}
+
+sup {
+  font-family: monospace;
+}
+
+td {
+  color: var(--base);
+  background-color: var(--light-grey);
+}
+
+th {
+  color: var(--base);
+  background-color: var(--bright);
+}
+/******************************************************************************/
+
+/************************************ Links ***********************************/
+/******************************************************************************/
+.nav li > a,
+.nav li > a:visited,
+footer > a,
+footer > a:visited {
+  color: var(--bright) !important;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.nav .active > a,
+.nav .active > a:hover,
+.nav .active > a:focus {
+  background-color: var(--muted);
+}
+
+.nav li > a:hover {
+  background-color: var(--muted);
+}
+
+.nav li > a:focus {
+  background: transparent;
+}
+
+main a,
+main a:visited {
+  color: var(--base);
+}
+
+a.btn,
+a:visited.btn {
+  color: var(--bright);
+  background-color: var(--base);
+}
+
+a:hover.btn,
+a.btn.active {
+  color: var(--bright);
+  background-color: var(--muted);
+}
+
+a.pdf {
+  margin-top: 10px;
+  width: 40%;
+}
+
+.reference a,
+.reference a:visited {
+  text-decoration: underline;
+}
+/******************************************************************************/
+
+/************************************ Images **********************************/
+/******************************************************************************/
+img {
+  margin-bottom: 10px;
+}
+
+/* for bio pictures */
+div img {
+  width: 300px;
+  height: 392px;
+}
+/******************************************************************************/
+
+/************************************ Classes *********************************/
+/******************************************************************************/
+
+.logo-style {
+  width: 90px;
+  height: 50px;
+}
+
+.logo-small {
+  color: var(--muted);
+  font-size: 100px;
+}
+
+main > .container-fluid {
+  padding: 100px 50px;
+}
+
+.bg-grey {
+  background-color: var(--light-grey);
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
+  color: var(--muted);
+}
+
+.carousel-indicators li,
+.carousel-indicators li.active {
+  border-color: var(--muted);
+}
+
+.thumbnail {
+  padding: 15px 0 15px 0;
+}
+
+.slide-animation {
+  visibility: hidden;
+}
+
+.item .row {
+  margin: 0;
+  width: 100%;
+}
+
+.slideIn {
+  animation-name: slideIn;
+  -webkit-animation-name: slideIn;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  visibility: visible;
+}
+
+.item table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.item table,
+th,
+td {
+  border: 2px solid #9898a3;
+  text-align: center;
+}
+
+.item th,
+td {
+  padding: 1em;
+}
+
+.navbar-brand {
+  padding-top: 0;
+}
+
+.icon-bar {
+  background-color: var(--black);
+}
+
+.presentation {
+  position: relative;
+  width: 70%;
+  height: 0;
+  padding-bottom: 41.49%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.presentation iframe,
+.presentation div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.presentation div {
+  background-color: var(--dark-grey);
+}
+
+.loading {
+  font-size: 4vw;
+  color: var(--black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bios {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bios .col-sm-4 {
+  padding-bottom: 30px;
+}
+
+.bios .col-sm-4 .thumbnail {
+  height: 100%;
+}
+/******************************************************************************/
+
+/******************************** Animation ***********************************/
+/******************************************************************************/
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+/******************************************************************************/
+
+/********************************** Media *************************************/
+/******************************************************************************/
+@media (max-width: 1040px) {
+  /* Quote from https://stackoverflow.com/questions/19827605/change-bootstrap-navbar-collapse-breakpoint-without-using-less */
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,
+  .navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
+  }
+  /* End Quote */
+
+  .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .navbar-collapse.collapse.in,
+  .navbar-collapse.collapsing {
+    max-height: 60vh;
+    overflow-y: auto !important;
+  }
+
+  .navbar-collapse.collapse.in a,
+  .navbar-collapse.collapsing a {
+    text-align: left;
+  }
+}
+
+@media (max-width: 850px) {
+  .riskTable {
+    font-size: 1.639vw;
+  }
+
+  .item > .thumbnail.container-fluid {
+    height: calc(62.4268vw + 365.646px);
+  }
+}
+
+@media (min-width: 850px) {
+  .item > .thumbnail.container-fluid {
+    height: 950px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1600px) {
+  .competitionItem {
+    height: calc(24.8317vw + 57.1031px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .competitionItem {
+    height: 445px;
+  }
+}
+
+@media (max-width: 818px) {
+  .mockupItem {
+    height: calc(71.4486vw + 10.5462px);
+  }
+}
+
+@media (min-width: 818px) {
+  .mockupItem {
+    height: 620.5px;
+  }
+}
+
+@media (max-width: 1194px) {
+  .algorithmItem {
+    height: calc(63.1801vw + 44.52px);
+  }
+}
+
+@media (min-width: 1194px) {
+  .algorithmItem {
+    height: 798.4px;
+  }
+}
+
+@media (max-width: 761px) {
+  .wbsItem {
+    height: calc(45.5274vw + 61.9771px);
+  }
+}
+
+@media (min-width: 761px) {
+  .wbsItem {
+    height: 408px;
+  }
+}
+/******************************************************************************/
